@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">About Me</string>
+    <string name="app_name">Jennifer</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -90,8 +90,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="aboutMe">Hola. Soy Jennifer.\nVengo de Caracas, Venezuela. Llevo 14 meses en Chile.
+                           Me gusta ser ordenada y esquematizar todo. </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="email">EMAIL</string>
+    <string name="email">ESCRIBEME AHORA</string>
 </resources>

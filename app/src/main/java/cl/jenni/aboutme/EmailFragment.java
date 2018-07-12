@@ -1,6 +1,8 @@
 package cl.jenni.aboutme;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -31,12 +34,31 @@ public class EmailFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Button btn = view.findViewById(R.id.contactBtn);
+
+        final TextView msgText = view.findViewById(R.id.msgText);
+        final Button btn = view.findViewById(R.id.contactBtn);
+        final Button btnSend = view.findViewById(R.id.sendBtn);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                btn.setVisibility(View.GONE);
+                msgText.setVisibility(View.VISIBLE);
+                btnSend.setVisibility(View.VISIBLE);
+            }
+        });
 
-                Toast.makeText(getContext(), "funciono", Toast.LENGTH_SHORT).show();
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setType("*/*");
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]
+                        {"tu@mail.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Contacto App Móvil");
+                intent.putExtra(Intent.EXTRA_TEXT, msgText.getText().toString());
+                startActivity(intent);
             }
         });
     }

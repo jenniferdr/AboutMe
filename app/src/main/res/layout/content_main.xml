@@ -8,10 +8,61 @@
     tools:context="cl.jenni.aboutme.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Button
+    <!--<Button
         android:id="@+id/testBtn"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="Presioname"/>
+        android:text="Presioname"/> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:padding="@dimen/fab_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aboutMe"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"/>
+
+        <RelativeLayout
+            android:padding="@dimen/fab_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="@dimen/fab_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/area"
+                android:text="Area"/>
+
+            <TextView
+                android:padding="@dimen/fab_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Meses"/>
+
+            <TextView
+                android:padding="@dimen/fab_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/area"
+                android:text="Android"/>
+
+            <TextView
+                android:padding="@dimen/fab_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/area"
+                android:layout_alignParentEnd="true"
+                android:text="3"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </android.support.v4.widget.NestedScrollView>

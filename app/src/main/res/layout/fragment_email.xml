@@ -2,12 +2,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cl.jenni.aboutme.EmailFragment">
+    tools:context="cl.jenni.aboutme.EmailFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/msgText"
+        android:visibility="gone"
+        android:hint="Mensaje"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/email"
+        android:textColor="@android:color/white"
+        android:theme="@style/AccentButton"
         android:id="@+id/contactBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendBtn"
+        android:visibility="gone"
+        android:text="Enviar" />
+
+    </LinearLayout>
 
 </FrameLayout>

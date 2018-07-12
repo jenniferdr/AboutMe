@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,23 +22,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        this.fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                fab.animate().rotation(45).setDuration(400).start();
                 Intent intent = new Intent(MainActivity.this,ContactActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button btn = (Button) findViewById(R.id.testBtn);
+        /*Button btn = (Button) findViewById(R.id.testBtn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"funciono",Toast.LENGTH_SHORT).show();
 
             }
-        });
+        });*/
     }
 
     @Override

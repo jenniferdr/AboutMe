@@ -3,14 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="cl.jenni.aboutme.ContactActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/ic_phone_black_24dp"
+        android:id="@+id/phone"
+        android:gravity="center"
+        android:text="+9 58756845"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:drawableLeft="@mipmap/ic_linkedin_black_24dp"
+        android:id="@+id/linkedin"
+        android:text="Linkedin"/>
 
     <fragment
         android:id="@+id/emailFragment"
         android:name="cl.jenni.aboutme.EmailFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 
 
 </LinearLayout>
